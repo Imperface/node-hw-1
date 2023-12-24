@@ -1,5 +1,7 @@
 const { Command } = require("commander");
 
+const contactServices = require("./contacts");
+
 const invokeAction = async ({ action, id, name, email, phone }) => {
   switch (action) {
     case "list":
@@ -57,8 +59,6 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
       console.log("Unknown action type!");
   }
 };
-
-const contactServices = require("./contacts");
 
 const program = new Command();
 
